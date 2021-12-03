@@ -13,13 +13,14 @@ while True:
         DiscordWebhook(url=webhook, rate_limit_retry=True, content=f"Valid code detected! @everyone discord.gift/{code}").execute()
     elif url.status_code == 404:
         print(f"Invalid Code | {code}")
+        # remove line once used
+        with open('codes.txt', 'r') as f:
+            data = f.read().splitlines(True)
+        with open('codes.txt', 'w') as t:
+            t.writelines(data[1:])
     elif url.status_code == 429:
         rate = int(url.json()['retry_after']) + 1
         print(f"Ratelimited! {round(rate, 2)}")
         time.sleep(rate)
     else:
         print(f"Invalid Error! | Status code {url.status_code}")
-    with open('codes.txt', 'r') as fin:
-        data = fin.read().splitlines(True)
-    with open('codes.txt', 'w') as fout:
-        fout.writelines(data[1:])

@@ -1,5 +1,5 @@
 # `🚀 nitrogen`
-Generates 1500 codes per second, program automatically sleeps until ratelimit is over
+Generates ~1500 codes per second, checker automatically sleeps until ratelimit is over
 
 Feel free to remove the webhooks and modify the code
 
@@ -12,4 +12,8 @@ Feel free to remove the webhooks and modify the code
 - discord_webhook
 
 ### Disclaimer
-The chance of actually generating a free nitro code is once every `209764971814303656073978799207967993682765370752446219652948019152648587157203875595862147553809767018908848319813705819495762990618705994014161517742890426855196167043982556249281` codes
+It will take an estimated
+
+> 1618556319284485249013445938293987426337431987407459770966499426390234564788954167383677587101221816851289274782379171392230326699490775593589967640388476924180050763439029
+
+days to find one nitro code

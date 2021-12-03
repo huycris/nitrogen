@@ -1,12 +1,11 @@
-import string, requests, random
+import string, random
 
 f = open("codes.txt", "a")
-code_counter = 0
-input("Press enter to activate\n")
+input("Codes will be stored in codes.txt Press enter to activate\n")
+amount = 0
 
 while True:
   code = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(16)])
-  code_counter += 1
-  print(f"{code_counter}  |  {code}")
+  amount += 1
+  print(f"{amount} : {code}")
   f.write(f"{code}\n")
-  f.close
